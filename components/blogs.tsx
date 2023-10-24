@@ -3,7 +3,6 @@
 import React from "react";
 import SectionHeading from "./section-heading";
 import { projectsData , blogsData } from "@/lib/data";
-import Project from "./project";
 import { useSectionInView } from "@/lib/hooks";
 import Blog from "./blg";
 
@@ -15,9 +14,9 @@ export default function Blogs() {
       <SectionHeading>My blogs</SectionHeading>
       <div>
         {blogsData.map((project, index) => (
-          <a href='/'><React.Fragment key={index}>
+          <React.Fragment key={index}>
            <Blog {...project} ></Blog>
-          </React.Fragment></a>
+          </React.Fragment>
         ))}
       </div>
     </section>
